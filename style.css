@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+main{
+    display: flex;
+    height: 100vh;
+}
+
+.cards_container{
+    background-image: url('images/bg-main-desktop.png');
+    background-size: cover;
+    width: 33.99%;
+    height: 100vh;
+    transition: all 0.3s ease-out;
+    max-width: 500px;
+}
+
+.cards{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+/*========== Front Card ============*/
+
+.front_card{
+    position: absolute;
+    left: 33.8%;
+    top: 19.8%;
+}
+.card_content{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 28px;
+    left: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 25.8%;
+}
+
+.circles{
+    width: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.big{
+    background-color: hsl(0, 0%, 100%);
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+}
+
+.small{
+    border: 1px solid hsl(0, 0%, 100%);
+    background-color: transparent;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+}
+
+.card_infos{
+    color: hsl(0, 0%, 100%);
+}
+
+.card_infos .card_number{
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 3.48px;
+}
+
+.data{
+    width: 85.7%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 26px;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/*=========== Back Card ==============*/
+
+.back_card{
+    position: absolute;
+    top: 49.8%;
+    left: 52.9%;
+}
+
+.back_card span{
+    position: absolute;
+    top: 111px;
+    right: 58px; 
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    letter-spacing: 1.7px;
+}
+
+
+/*=========== Form ==============*/
+
+.form_container{
+    width: 64%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+}
+
+.form label{
+    color: hsl(278, 68%, 11%);
+    font-size: 12.2px;
+    letter-spacing: 1.8px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form input{
+    width: 382px;
+    height: 45px;
+    border: 1px solid rgba(41, 41, 41, 0.2);
+    border-radius: 8px;
+    margin-bottom: 26px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.form input::placeholder{
+    color:  hsl(279, 6%, 75%);
+}
+
+.date{
+    margin-right: 10px;
+}
+
+
+.date input{
+    width: 80px;
+    margin-right: 10px;
+    padding: 15px;
+}
+.date{
+    display: flex;
+    flex-direction: column;
+}
+
+.cvc{
+    display: flex;
+    flex-direction: column;
+}
+
+.cvc input{
+    width: 191px; 
+}
+
+.flex  {
+    width: 100%;
+    display: flex;
+}
+
+.warn{
+    font-size: 12px;
+    color: hsl(0, 100%, 66%);
+    font-weight: 500;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+.hide{
+    display: none;
+}
+
+.form button{
+    margin-top: 14px;
+    width: 381px;
+    height: 53px;
+    border: none;
+    background-color: hsl(278, 68%, 11%);
+    border-radius: 8px;
+    color: hsl(0, 0%, 100%);
+    font-size: 18px;
+}
+
+@media(max-width:  1330px){
+    .back_card{
+        left: 35%;
+    } 
+
+    .front_card{
+        left: 20%;
+    } 
+}
+
+@media(max-width: 1100px){
+    main{
+        flex-direction: column;
+    }
+
+    .cards_container{
+        background-image: url("images/bg-main-mobile.png");
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        max-width: none;
+
+    }
+
+    .cards{
+        max-width: none;
+        width: 75%;
+        margin-inline: 20px;
+        justify-content: space-between;
+        min-width: 520px;
+        max-width: 700px;
+    }
+
+    .front_card{
+        top: 48%;
+        left: 0;
+        width: 420px;
+        z-index: 2;
+    }
+
+    .back_card{
+        top: 10%;
+        left: auto;
+        right: 0;
+        width: 420px;
+        z-index: 1;
+        min-width: 300px;
+    }
+
+    .back_card span{
+        top: 102px;
+        right: 52px;
+        font-size: 17px;
+    }
+
+    .front_card .card_number{
+        font-size: 24px;
+  
+    }
+
+    .front_card img{
+        width: 100%;
+    }
+
+    .back_card img{
+        width: 100%;
+    }
+
+    .form_container{
+        width: 100%;
+        height: 100%;
+        align-items: center;
+    }
+
+    .form{
+        margin: 0;
+        margin-top: 50px;
+    }
+}
+
+.attribution{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 580px) {
+    main{
+        width: 100%;
+    }
+
+    .cards_container{
+        width: 100px;
+    }
+
+    .cards{
+        max-width: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 0;  
+        max-width: 400px; 
+    }
+
+    .front_card{
+        top: 48%;
+        left:0;
+        width: 300px;
+        z-index: 2;
+        
+    }
+
+    .front_card .card_number{
+        font-size: 17.5px;
+        
+    }
+
+    .back_card{
+        top: 10%;
+        left: auto;
+        right: 0;
+        width: 40px;
+        z-index: 1;
+    }
+
+    .back_card .card_number{
+        font-size: 17.5px;
+        
+    }
+
+    .back_card span{
+        top: 72px;
+        right: 45px;
+    }
+
+    
+
+    .cards_container{
+        background-image: url("images/bg-main-mobile.png");
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        max-width: none;
+    }
+
+    .circles{
+        width: 54px;
+    }
+    
+    .big{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .small{
+        width: 14px;
+        height: 14px;
+    }
+
+    .card_content{
+        top: 18px;
+        left: 20px;
+        gap: 25%;
+    }
+
+    .form {
+        margin-top: 0;
+        width: 70%;
+        justify-content: center;
+    }
+
+    .form input, label{
+        width: 100%;
+    }
+
+    .flex{
+        width: ;
+    }
+
+    .form button{
+        width: 100%;
+    }
+
+    .form label{
+        font-size: 11px;
+    }
+
+    .flex .short{
+        width: 150px;
+    }
+}

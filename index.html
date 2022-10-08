@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+
+  <main>
+    <div class="cards_container">
+      <div class="cards">
+        <div class="front_card">
+          <img src="images/bg-card-front.png" alt="">
+          <div class="card_content">
+              <div class="circles">
+                <div class="big"></div>
+                <div class="small"></div>
+              </div>
+
+              <div class="card_infos">
+                <span class="card_number">0000 0000 0000 0000</span>
+                <div class="data">
+                  <span id="card_name">JANE APPLESEED</span>
+                  <span> <span id="card_month">00</span> / <span id="card_year">00</span> </span>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="back_card">
+          <img src="images/bg-card-back.png" alt="">
+          <span id="card_cvc">000</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="form_container">
+        <form  class="form" action="">
+          <label for="name">CARDHOLDER NAME</label>
+          <input class="name_input form_input" placeholder=" e.g. Jane Appleseed" type="text" id="name" required>
+          <p class="name_warn warn hide">Can't be blank</p>
+
+          <label for="card_number">CARD NUMBER</label>
+          <input class="number_input form_input" placeholder=" e.g. 1234 5678 9123 0000" type="number" id="card_number" required>
+          <p class="number_warn warn hide">Can't be blank</p>
+
+          <div class="flex"> 
+            <div class="date">
+              <label for="date">EXP. DATE (MM/YY)</label>
+              <div class="flex short">
+                <input class="date_input date_mm_input form_input" placeholder="MM" type="number" id="date" required>
+                <input class="date_input date_yy_input form_input" placeholder="YY" type="number" id="date" required>
+              </div>
+              <p class="date_warn warn hide">Can't be blank</p>
+            </div>
+            <div class="cvc">
+              <label for="cvc">CVC</label>
+              <input pattern="{0,3}" size="2" class="cvc_input form_input" placeholder="e.g. 123" type="number" id="cvc" required>
+              <p class="cvc_warn warn hide">Can't be blank</p>
+            </div>
+          </div>
+        <button type="submit">Confirm</button>
+      </form>
+    </div>
+  </main>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Henrique Dummer</a>.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
